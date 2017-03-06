@@ -30,19 +30,20 @@ function processLine(line) {
         for(var x in dd.fields) {
                 var field = dd.fields[x];
                 //chop up the data line by field
-                var fieldValue = line.substr(field.startPos, field.length);
+                data[x] = line.substr(field.startPos, field.length);
+                //var fieldValue = line.substr(field.startPos, field.length);
 
-                //check for type
-                if (!("undefined" == field.type)) {
-                        switch (field.type) {
-                                case "date":
-                                        fieldValue = moment(fieldValue, field.format.input, true).format(field.format.output);
-                                        break;
-                                default:
-
-                        }
-                }
-                data[x] = fieldValue;
+                // //check for type
+                // if (!("undefined" == field.type)) {
+                //         switch (field.type) {
+                //                 case "date":
+                //                         fieldValue = moment(fieldValue, field.format.input, true).format(field.format.output);
+                //                         break;
+                //                 default:
+                //
+                //         }
+                // }
+                //data[x] = fieldValue;
         }
         ws.write("\"" + data.join("\",\"") + "\"\r\n");
 }
