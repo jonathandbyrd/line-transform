@@ -2,7 +2,7 @@
 var fs = require("fs");
 var moment = require("moment");
 var eol = require('os').EOL
-const dd = require("./config/inpatient-data-dictionary.json");
+const dd = require("./config/outpatient-data-dictionary.json");
 
 var fileName = process.argv[2];
 var LineByLineReader = require('line-by-line'),
