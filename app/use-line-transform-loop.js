@@ -30,10 +30,10 @@ else {
   else {
     switch (recordType) {
       case "inpatient":
-        ddPath = path.join(configDirectory, inPatientDictionary);
+        ddPath = "./config/inpatient-data-dictionary.json";
         break;
       case "outpatient":
-        ddPath = path.join(configDirectory, outPatientDictionary);
+        ddPath = "./config/outpatient-data-dictionary.json";
         break;
     }
   }
@@ -90,7 +90,7 @@ function processLine(line) {
         for(var x in dd.fields) {
                 var field = dd.fields[x];
                 //chop up the data line by field
-                data[x] = line.substr((field.startPos - 1), field.length);
+                data[x] = line.substr((field.startPos - 1), field.length).trim();
                 //var fieldValue = line.substr(field.startPos, field.length);
 
                 // //check for type
@@ -105,5 +105,6 @@ function processLine(line) {
                 // }
                 //data[x] = fieldValue;
         }
-        out.write(`"${data.join("\",\"")}"${eol}`);
+        var finalLine = `"${data.join("\",\"")}"`;
+        out.write(`${finalLine.replace(/""/g, "")}${eol}`);
 }
