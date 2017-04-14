@@ -73,10 +73,10 @@ fs.readdir(dataDirectory, function(err, files) {
 
     lr.on('end', function () {
       // All lines are read, file is closed now.
-
+        console.timeEnd(fileTime);
     });
 
-    console.timeEnd(fileTime);
+
   });
 });
 
@@ -106,5 +106,5 @@ function processLine(line) {
                 //data[x] = fieldValue;
         }
         var finalLine = `"${data.join("\",\"")}"`;
-        out.write(`${finalLine.replace(/""/g, "")}${eol}`);
+        out.write(`${finalLine.replace(/""/, "")}${eol}`);
 }
