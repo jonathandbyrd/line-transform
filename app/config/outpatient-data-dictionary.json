@@ -1,577 +1,87 @@
 {
-        "command" : " COPY test1 FROM 'C:\\import.txt' (FORMAT csv);",
         "fields" : [
-          {"name" : "DischargeNum","startPos" : 1,"length" : 14}
-          ,{"name" : "ContinuationFlag","startPos" : 15,"length" : 1}
-          ,{"name" : "RecordSequence","startPos" : 16,"length" : 3}
-          ,{"name" : "RecordCount","startPos" : 19,"length" : 3}
-          ,{"name" : "Filler","startPos" : 22,"length" : 2}
-          ,{"name" : "PatientControlNum","startPos" : 24,"length" : 20}
-          ,{"name" : "MRN","startPos" : 44,"length" : 17}
-          ,{"name" : "UPID","startPos" : 61,"length" : 10}
-          ,{"name" : "UPIDE","startPos" : 71,"length" : 19}
-          ,{"name" : "PatientDOB","startPos" : 90,"length" : 8}
-          ,{"name" : "Age","startPos" : 98,"length" : 3}
-          ,{"name" : "AgeinDays","startPos" : 101,"length" : 3}
-          ,{"name" : "Sex","startPos" : 104,"length" : 1}
-          ,{"name" : "Race","startPos" : 105,"length" : 2}
-          ,{"name" : "Ethnicity","startPos" : 107,"length" : 1}
-          ,{"name" : "StreetAddress1","startPos" : 108,"length" : 18}
-          ,{"name" : "StreetAddress2","startPos" : 126,"length" : 18}
-          ,{"name" : "City","startPos" : 144,"length" : 15}
-          ,{"name" : "State","startPos" : 159,"length" : 2}
-          ,{"name" : "ZipCode","startPos" : 161,"length" : 5}
-          ,{"name" : "ZipCodeExtension","startPos" : 166,"length" : 4}
-          ,{"name" : "County","startPos" : 170,"length" : 2}
-          ,{"name" : "Region","startPos" : 172,"length" : 2}
-          ,{"name" : "NewbornFlag","startPos" : 174,"length" : 1}
-          ,{"name" : "FacilityID","startPos" : 175,"length" : 6}
-          ,{"name" : "SPARCSCheckDigit","startPos" : 181,"length" : 1}
-          ,{"name" : "FacilityName","startPos" : 182,"length" : 70}
-          ,{"name" : "HealthServiceArea","startPos" : 252,"length" : 1}
-          ,{"name" : "FacilityCounty","startPos" : 253,"length" : 2}
-          ,{"name" : "FacilityOperatingCertNum","startPos" : 255,"length" : 7}
-          ,{"name" : "FacilityNationalProviderID","startPos" : 262,"length" : 10}
-          ,{"name" : "AttendingProviderLicNum","startPos" : 272,"length" : 8}
-          ,{"name" : "OperatingPhysicianLicNum","startPos" : 280,"length" : 8}
-          ,{"name" : "OtherProviderLicNum","startPos" : 288,"length" : 8}
-          ,{"name" : "PayorTypology1","startPos" : 296,"length" : 5}
-          ,{"name" : "PayorTypology2","startPos" : 301,"length" : 5}
-          ,{"name" : "PayorTypology3","startPos" : 306,"length" : 5}
-          ,{"name" : "SourceofPayment1","startPos" : 311,"length" : 1}
-          ,{"name" : "X12SourceofPayment1","startPos" : 312,"length" : 2}
-          ,{"name" : "InsurancePayorID1","startPos" : 314,"length" : 8}
-          ,{"name" : "ProviderID1","startPos" : 322,"length" : 13}
-          ,{"name" : "SourceofPayment2","startPos" : 335,"length" : 1}
-          ,{"name" : "X12SourceofPayment2","startPos" : 336,"length" : 2}
-          ,{"name" : "InsurancePayorID2","startPos" : 338,"length" : 8}
-          ,{"name" : "ProviderID2","startPos" : 346,"length" : 13}
-          ,{"name" : "SourceofPayment3","startPos" : 359,"length" : 1}
-          ,{"name" : "X12SourceofPayment3","startPos" : 360,"length" : 2}
-          ,{"name" : "InsurancePayorID3","startPos" : 362,"length" : 8}
-          ,{"name" : "ProviderID3","startPos" : 370,"length" : 13}
-          ,{"name" : "SourceofPayment4","startPos" : 383,"length" : 1}
-          ,{"name" : "X12SourceofPayment4","startPos" : 384,"length" : 2}
-          ,{"name" : "InsurancePayorID4","startPos" : 386,"length" : 8}
-          ,{"name" : "ProviderID4","startPos" : 394,"length" : 13}
-          ,{"name" : "SourceofPayment5","startPos" : 407,"length" : 1}
-          ,{"name" : "X12SourceofPayment5","startPos" : 408,"length" : 2}
-          ,{"name" : "InsurancePayorID5","startPos" : 410,"length" : 8}
-          ,{"name" : "ProviderID5","startPos" : 418,"length" : 13}
-          ,{"name" : "SourceofPayment6","startPos" : 431,"length" : 1}
-          ,{"name" : "X12SourceofPayment6","startPos" : 432,"length" : 2}
-          ,{"name" : "InsurancePayorID6","startPos" : 434,"length" : 8}
-          ,{"name" : "ProviderID6","startPos" : 442,"length" : 13}
-          ,{"name" : "PrimaryExpectedReimbursement","startPos" : 455,"length" : 2}
-          ,{"name" : "MedicaidRateCode","startPos" : 457,"length" : 4}
-          ,{"name" : "SubmissionLogNumber","startPos" : 461,"length" : 6}
-          ,{"name" : "SubmissionTransactionCode","startPos" : 467,"length" : 1}
-          ,{"name" : "DateSubmissionProcessed","startPos" : 468,"length" : 8}
-          ,{"name" : "DataCollector","startPos" : 476,"length" : 3}
-          ,{"name" : "ClaimType","startPos" : 479,"length" : 1}
-          ,{"name" : "FileType","startPos" : 480,"length" : 1}
-          ,{"name" : "ResidenceFlag","startPos" : 481,"length" : 1}
-          ,{"name" : "OperatingTime","startPos" : 482,"length" : 3}
-          ,{"name" : "AccidentHour","startPos" : 485,"length" : 2}
-          ,{"name" : "EDFlag","startPos" : 487,"length" : 1}
-          ,{"name" : "ClaimStatementFromDate","startPos" : 488,"length" : 8}
-          ,{"name" : "ClaimStatementThruDate","startPos" : 496,"length" : 8}
-          ,{"name" : "AdmissionDate","startPos" : 504,"length" : 8}
-          ,{"name" : "DayofAdmission","startPos" : 512,"length" : 3}
-          ,{"name" : "HourofAdmission","startPos" : 515,"length" : 2}
-          ,{"name" : "DischargeDate","startPos" : 517,"length" : 8}
-          ,{"name" : "DayofDischarge","startPos" : 525,"length" : 3}
-          ,{"name" : "HourofDischarge","startPos" : 528,"length" : 2}
-          ,{"name" : "SamedayDischargeFlag","startPos" : 530,"length" : 1}
-          ,{"name" : "DischargeDisposition","startPos" : 531,"length" : 2}
-          ,{"name" : "TypeofBill","startPos" : 533,"length" : 3}
-          ,{"name" : "ServiceClass","startPos" : 536,"length" : 1}
-          ,{"name" : "AdmissionDiagnosisCode","startPos" : 537,"length" : 7}
-          ,{"name" : "DiagnosisCode1","startPos" : 544,"length" : 7}
-          ,{"name" : "DiagnosisCode2","startPos" : 551,"length" : 7}
-          ,{"name" : "DiagnosisCode3","startPos" : 558,"length" : 7}
-          ,{"name" : "DiagnosisCode4","startPos" : 565,"length" : 7}
-          ,{"name" : "DiagnosisCode5","startPos" : 572,"length" : 7}
-          ,{"name" : "DiagnosisCode6","startPos" : 579,"length" : 7}
-          ,{"name" : "DiagnosisCode7","startPos" : 586,"length" : 7}
-          ,{"name" : "DiagnosisCode8","startPos" : 593,"length" : 7}
-          ,{"name" : "DiagnosisCode9","startPos" : 600,"length" : 7}
-          ,{"name" : "DiagnosisCode10","startPos" : 607,"length" : 7}
-          ,{"name" : "DiagnosisCode11","startPos" : 614,"length" : 7}
-          ,{"name" : "DiagnosisCode12","startPos" : 621,"length" : 7}
-          ,{"name" : "DiagnosisCode13","startPos" : 628,"length" : 7}
-          ,{"name" : "DiagnosisCode14","startPos" : 635,"length" : 7}
-          ,{"name" : "DiagnosisCode15","startPos" : 642,"length" : 7}
-          ,{"name" : "DiagnosisCode16","startPos" : 649,"length" : 7}
-          ,{"name" : "DiagnosisCode17","startPos" : 656,"length" : 7}
-          ,{"name" : "DiagnosisCode18","startPos" : 663,"length" : 7}
-          ,{"name" : "DiagnosisCode19","startPos" : 670,"length" : 7}
-          ,{"name" : "DiagnosisCode20","startPos" : 677,"length" : 7}
-          ,{"name" : "DiagnosisCode21","startPos" : 684,"length" : 7}
-          ,{"name" : "DiagnosisCode22","startPos" : 691,"length" : 7}
-          ,{"name" : "DiagnosisCode23","startPos" : 698,"length" : 7}
-          ,{"name" : "DiagnosisCode24","startPos" : 705,"length" : 7}
-          ,{"name" : "DiagnosisCode25","startPos" : 712,"length" : 7}
-          ,{"name" : "CCSDiagnosisGroup","startPos" : 719,"length" : 3}
-          ,{"name" : "AccidentType","startPos" : 722,"length" : 2}
-          ,{"name" : "DateofAccident","startPos" : 724,"length" : 8}
-          ,{"name" : "EcodeCause","startPos" : 732,"length" : 7}
-          ,{"name" : "EcodePlace","startPos" : 739,"length" : 7}
-          ,{"name" : "ICDCode1","startPos" : 746,"length" : 4}
-          ,{"name" : "ProcedureDate1","startPos" : 750,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag1","startPos" : 758,"length" : 1}
-          ,{"name" : "ICDCode2","startPos" : 759,"length" : 4}
-          ,{"name" : "ProcedureDate2","startPos" : 763,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag2","startPos" : 771,"length" : 1}
-          ,{"name" : "ICDCode3","startPos" : 772,"length" : 4}
-          ,{"name" : "ProcedureDate3","startPos" : 776,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag3","startPos" : 784,"length" : 1}
-          ,{"name" : "ICDCode4","startPos" : 785,"length" : 4}
-          ,{"name" : "ProcedureDate4","startPos" : 789,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag4","startPos" : 797,"length" : 1}
-          ,{"name" : "ICDCode5","startPos" : 798,"length" : 4}
-          ,{"name" : "ProcedureDate5","startPos" : 802,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag5","startPos" : 810,"length" : 1}
-          ,{"name" : "ICDCode6","startPos" : 811,"length" : 4}
-          ,{"name" : "ProcedureDate6","startPos" : 815,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag6","startPos" : 823,"length" : 1}
-          ,{"name" : "ICDCode7","startPos" : 824,"length" : 4}
-          ,{"name" : "ProcedureDate7","startPos" : 828,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag7","startPos" : 836,"length" : 1}
-          ,{"name" : "ICDCode8","startPos" : 837,"length" : 4}
-          ,{"name" : "ProcedureDate8","startPos" : 841,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag8","startPos" : 849,"length" : 1}
-          ,{"name" : "ICDCode9","startPos" : 850,"length" : 4}
-          ,{"name" : "ProcedureDate9","startPos" : 854,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag9","startPos" : 862,"length" : 1}
-          ,{"name" : "ICDCode10","startPos" : 863,"length" : 4}
-          ,{"name" : "ProcedureDate10","startPos" : 867,"length" : 8}
-          ,{"name" : "PreAdmitProcedureFlag10","startPos" : 875,"length" : 1}
-          ,{"name" : "ICDCode11","startPos" : 876,"length" : 4}
-          ,{"name" : "ProcedureDate11","startPos" : 880,"length" : 8}
-          ,{"name" : "Preadmitprocedureflag11","startPos" : 888,"length" : 1}
-          ,{"name" : "ICDCode12","startPos" : 889,"length" : 4}
-          ,{"name" : "ProcedureDate12","startPos" : 893,"length" : 8}
-          ,{"name" : "Preadmitprocedureflag12","startPos" : 901,"length" : 1}
-          ,{"name" : "ICDCode13","startPos" : 902,"length" : 4}
-          ,{"name" : "ProcedureDate13","startPos" : 906,"length" : 8}
-          ,{"name" : "Preadmitprocedureflag13","startPos" : 914,"length" : 1}
-          ,{"name" : "ICDCode14","startPos" : 915,"length" : 4}
-          ,{"name" : "ProcedureDate14","startPos" : 919,"length" : 8}
-          ,{"name" : "Preadmitprocedureflag14","startPos" : 927,"length" : 1}
-          ,{"name" : "ICDCode15","startPos" : 928,"length" : 4}
-          ,{"name" : "ProcedureDate15","startPos" : 932,"length" : 8}
-          ,{"name" : "Preadmitprocedureflag15","startPos" : 940,"length" : 1}
-          ,{"name" : "CCSProcedureCategory","startPos" : 941,"length" : 3}
-          ,{"name" : "TypeofAnesthesia","startPos" : 944,"length" : 2}
-          ,{"name" : "ICDAgeWarning","startPos" : 946,"length" : 1}
-          ,{"name" : "ProcedureDateWarning","startPos" : 947,"length" : 1}
-          ,{"name" : "ProcedureCodingMethodUsed","startPos" : 948,"length" : 1}
-          ,{"name" : "GroupingClaimProcessedFlag","startPos" : 949,"length" : 2}
-          ,{"name" : "ClaimProcessedWarningsMsgs","startPos" : 951,"length" : 10}
-          ,{"name" : "NumberofVisits","startPos" : 961,"length" : 3}
-          ,{"name" : "APGVersionUsed","startPos" : 964,"length" : 12}
-          ,{"name" : "APGListReturnCode","startPos" : 976,"length" : 2}
-          ,{"name" : "APGListErrorLocation","startPos" : 978,"length" : 3}
-          ,{"name" : "ItemIDnumber","startPos" : 981,"length" : 3}
-          ,{"name" : "ErrorReturnCode","startPos" : 984,"length" : 3}
-          ,{"name" : "ClaimAPGPayment","startPos" : 987,"length" : 8}
-          ,{"name" : "ClaimTransVisitAPGPayment","startPos" : 995,"length" : 8}
-          ,{"name" : "ClaimExistingPayment","startPos" : 1003,"length" : 8}
-          ,{"name" : "ClaimBlendedPayment","startPos" : 1011,"length" : 8}
-          ,{"name" : "ClaimAddonPayment","startPos" : 1019,"length" : 8}
-          ,{"name" : "TotalClaimPayment","startPos" : 1027,"length" : 8}
-          ,{"name" : "ClaimNontransitionPayment","startPos" : 1035,"length" : 8}
-          ,{"name" : "ClaimAdjustedAPGWeight","startPos" : 1043,"length" : 9}
-          ,{"name" : "TotalClaimFullAPGWeight","startPos" : 1052,"length" : 9}
-          ,{"name" : "ClaimPayment","startPos" : 1061,"length" : 8}
-          ,{"name" : "AMIWarningFlag","startPos" : 1069,"length" : 1}
-          ,{"name" : "Pulse","startPos" : 1070,"length" : 3}
-          ,{"name" : "SystolicBloodPressure","startPos" : 1073,"length" : 3}
-          ,{"name" : "DiastolicBloodPressure","startPos" : 1076,"length" : 3}
-          ,{"name" : "AIDSHIVFlag","startPos" : 1079,"length" : 1}
-          ,{"name" : "AbortionFlag","startPos" : 1080,"length" : 1}
-          ,{"name" : "TotalCharges","startPos" : 1081,"length" : 12}
-          ,{"name" : "TotalAncillaryCharges","startPos" : 1093,"length" : 10}
-          ,{"name" : "TotalNCCharges","startPos" : 1103,"length" : 12}
-          ,{"name" : "TotalNCAncillaryCharges","startPos" : 1115,"length" : 10}
-          ,{"name" : "RevenueCode1","startPos" : 1125,"length" : 4}
-          ,{"name" : "TypeofRevenueCode1","startPos" : 1129,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC1","startPos" : 1130,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier11","startPos" : 1135,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier21","startPos" : 1137,"length" : 2}
-          ,{"name" : "ChargeofService1","startPos" : 1139,"length" : 10}
-          ,{"name" : "TypeofUnit1","startPos" : 1149,"length" : 2}
-          ,{"name" : "Quantity1","startPos" : 1151,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService1","startPos" : 1159,"length" : 10}
-          ,{"name" : "ServiceFromDate1","startPos" : 1169,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag1","startPos" : 1177,"length" : 1}
-          ,{"name" : "Lineitemnumber1","startPos" : 1178,"length" : 3}
-          ,{"name" : "VisitID1","startPos" : 1181,"length" : 3}
-          ,{"name" : "LinesinVisit1","startPos" : 1184,"length" : 3}
-          ,{"name" : "VisitDate1","startPos" : 1187,"length" : 8}
-          ,{"name" : "VisitProcessedFlag1","startPos" : 1195,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs1","startPos" : 1196,"length" : 10}
-          ,{"name" : "OverallVisitType1","startPos" : 1206,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis1","startPos" : 1208,"length" : 7}
-          ,{"name" : "FinalAPGAssignment1","startPos" : 1215,"length" : 5}
-          ,{"name" : "FinalAPGType1","startPos" : 1220,"length" : 2}
-          ,{"name" : "FinalAPGCategory1","startPos" : 1222,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag1","startPos" : 1224,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag1","startPos" : 1225,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag1","startPos" : 1226,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag1","startPos" : 1227,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag1","startPos" : 1228,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag1","startPos" : 1230,"length" : 1}
-          ,{"name" : "PackagingFlag1","startPos" : 1231,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag1","startPos" : 1232,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag1","startPos" : 1233,"length" : 1}
-          ,{"name" : "LineItemActionFlag1","startPos" : 1234,"length" : 2}
-          ,{"name" : "ItemIDnumber1","startPos" : 1236,"length" : 3}
-          ,{"name" : "LineItemAPGPayment1","startPos" : 1239,"length" : 8}
-          ,{"name" : "LineItemExistingPayment1","startPos" : 1247,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment1","startPos" : 1255,"length" : 8}
-          ,{"name" : "LineItemAddonPayment1","startPos" : 1263,"length" : 8}
-          ,{"name" : "LineItemTotalPayment1","startPos" : 1271,"length" : 8}
-          ,{"name" : "LineItemBlendPercent1","startPos" : 1279,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight1","startPos" : 1284,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight1","startPos" : 1293,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent1","startPos" : 1302,"length" : 6}
-          ,{"name" : "LineItemPaymentAction1","startPos" : 1308,"length" : 2}
-          ,{"name" : "LineItemPaidUnits1","startPos" : 1310,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag1","startPos" : 1317,"length" : 2}
-          ,{"name" : "VisitAPGPayment1","startPos" : 1319,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment1","startPos" : 1327,"length" : 8}
-          ,{"name" : "VisitExistingPayment1","startPos" : 1335,"length" : 8}
-          ,{"name" : "VisitBlendedPayment1","startPos" : 1343,"length" : 8}
-          ,{"name" : "VisitAddonPayment1","startPos" : 1351,"length" : 8}
-          ,{"name" : "VisitPayment1","startPos" : 1359,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment1","startPos" : 1367,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight1","startPos" : 1375,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight1","startPos" : 1384,"length" : 9}
-          ,{"name" : "RevenueCode2","startPos" : 1393,"length" : 4}
-          ,{"name" : "TypeofRevenueCode2","startPos" : 1397,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC2","startPos" : 1398,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier12","startPos" : 1403,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier22","startPos" : 1405,"length" : 2}
-          ,{"name" : "ChargeofService2","startPos" : 1407,"length" : 10}
-          ,{"name" : "TypeofUnit2","startPos" : 1417,"length" : 2}
-          ,{"name" : "Quantity2","startPos" : 1419,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService2","startPos" : 1427,"length" : 10}
-          ,{"name" : "ServiceFromDate2","startPos" : 1437,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag2","startPos" : 1445,"length" : 1}
-          ,{"name" : "Lineitemnumber2","startPos" : 1446,"length" : 3}
-          ,{"name" : "VisitID2","startPos" : 1449,"length" : 3}
-          ,{"name" : "LinesinVisit2","startPos" : 1452,"length" : 3}
-          ,{"name" : "VisitDate2","startPos" : 1455,"length" : 8}
-          ,{"name" : "VisitProcessedFlag2","startPos" : 1463,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs2","startPos" : 1464,"length" : 10}
-          ,{"name" : "OverallVisitType2","startPos" : 1474,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis2","startPos" : 1476,"length" : 7}
-          ,{"name" : "FinalAPGAssignment2","startPos" : 1483,"length" : 5}
-          ,{"name" : "FinalAPGType2","startPos" : 1488,"length" : 2}
-          ,{"name" : "FinalAPGCategory2","startPos" : 1490,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag2","startPos" : 1492,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag2","startPos" : 1493,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag2","startPos" : 1494,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag2","startPos" : 1495,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag2","startPos" : 1496,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag2","startPos" : 1498,"length" : 1}
-          ,{"name" : "PackagingFlag2","startPos" : 1499,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag2","startPos" : 1500,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag2","startPos" : 1501,"length" : 1}
-          ,{"name" : "LineItemActionFlag2","startPos" : 1502,"length" : 2}
-          ,{"name" : "ItemIDnumber2","startPos" : 1504,"length" : 3}
-          ,{"name" : "LineItemAPGPayment2","startPos" : 1507,"length" : 8}
-          ,{"name" : "LineItemExistingPayment2","startPos" : 1515,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment2","startPos" : 1523,"length" : 8}
-          ,{"name" : "LineItemAddonPayment2","startPos" : 1531,"length" : 8}
-          ,{"name" : "LineItemTotalPayment2","startPos" : 1539,"length" : 8}
-          ,{"name" : "LineItemBlendPercent2","startPos" : 1547,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight2","startPos" : 1552,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight2","startPos" : 1561,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent2","startPos" : 1570,"length" : 6}
-          ,{"name" : "LineItemPaymentAction2","startPos" : 1576,"length" : 2}
-          ,{"name" : "LineItemPaidUnits2","startPos" : 1578,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag2","startPos" : 1585,"length" : 2}
-          ,{"name" : "VisitAPGPayment2","startPos" : 1587,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment2","startPos" : 1595,"length" : 8}
-          ,{"name" : "VisitExistingPayment2","startPos" : 1603,"length" : 8}
-          ,{"name" : "VisitBlendedPayment2","startPos" : 1611,"length" : 8}
-          ,{"name" : "VisitAddonPayment2","startPos" : 1619,"length" : 8}
-          ,{"name" : "VisitPayment2","startPos" : 1627,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment2","startPos" : 1635,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight2","startPos" : 1643,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight2","startPos" : 1652,"length" : 9}
-          ,{"name" : "RevenueCode3","startPos" : 1661,"length" : 4}
-          ,{"name" : "TypeofRevenueCode3","startPos" : 1665,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC3","startPos" : 1666,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier13","startPos" : 1671,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier23","startPos" : 1673,"length" : 2}
-          ,{"name" : "ChargeofService3","startPos" : 1675,"length" : 10}
-          ,{"name" : "TypeofUnit3","startPos" : 1685,"length" : 2}
-          ,{"name" : "Quantity3","startPos" : 1687,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService3","startPos" : 1695,"length" : 10}
-          ,{"name" : "ServiceFromDate3","startPos" : 1705,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag3","startPos" : 1713,"length" : 1}
-          ,{"name" : "Lineitemnumber3","startPos" : 1714,"length" : 3}
-          ,{"name" : "VisitID3","startPos" : 1717,"length" : 3}
-          ,{"name" : "LinesinVisit3","startPos" : 1720,"length" : 3}
-          ,{"name" : "VisitDate3","startPos" : 1723,"length" : 8}
-          ,{"name" : "VisitProcessedFlag3","startPos" : 1731,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs3","startPos" : 1732,"length" : 10}
-          ,{"name" : "OverallVisitType3","startPos" : 1742,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis3","startPos" : 1744,"length" : 7}
-          ,{"name" : "FinalAPGAssignment3","startPos" : 1751,"length" : 5}
-          ,{"name" : "FinalAPGType3","startPos" : 1756,"length" : 2}
-          ,{"name" : "FinalAPGCategory3","startPos" : 1758,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag3","startPos" : 1760,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag3","startPos" : 1761,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag3","startPos" : 1762,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag3","startPos" : 1763,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag3","startPos" : 1764,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag3","startPos" : 1766,"length" : 1}
-          ,{"name" : "PackagingFlag3","startPos" : 1767,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag3","startPos" : 1768,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag3","startPos" : 1769,"length" : 1}
-          ,{"name" : "LineItemActionFlag3","startPos" : 1770,"length" : 2}
-          ,{"name" : "ItemIDnumber3","startPos" : 1772,"length" : 3}
-          ,{"name" : "LineItemAPGPayment3","startPos" : 1775,"length" : 8}
-          ,{"name" : "LineItemExistingPayment3","startPos" : 1783,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment3","startPos" : 1791,"length" : 8}
-          ,{"name" : "LineItemAddonPayment3","startPos" : 1799,"length" : 8}
-          ,{"name" : "LineItemTotalPayment3","startPos" : 1807,"length" : 8}
-          ,{"name" : "LineItemBlendPercent3","startPos" : 1815,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight3","startPos" : 1820,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight3","startPos" : 1829,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent3","startPos" : 1838,"length" : 6}
-          ,{"name" : "LineItemPaymentAction3","startPos" : 1844,"length" : 2}
-          ,{"name" : "LineItemPaidUnits3","startPos" : 1846,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag3","startPos" : 1853,"length" : 2}
-          ,{"name" : "VisitAPGPayment3","startPos" : 1855,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment3","startPos" : 1863,"length" : 8}
-          ,{"name" : "VisitExistingPayment3","startPos" : 1871,"length" : 8}
-          ,{"name" : "VisitBlendedPayment3","startPos" : 1879,"length" : 8}
-          ,{"name" : "VisitAddonPayment3","startPos" : 1887,"length" : 8}
-          ,{"name" : "VisitPayment3","startPos" : 1895,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment3","startPos" : 1903,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight3","startPos" : 1911,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight3","startPos" : 1920,"length" : 9}
-          ,{"name" : "RevenueCode4","startPos" : 1929,"length" : 4}
-          ,{"name" : "TypeofRevenueCode4","startPos" : 1933,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC4","startPos" : 1934,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier14","startPos" : 1939,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier24","startPos" : 1941,"length" : 2}
-          ,{"name" : "ChargeofService4","startPos" : 1943,"length" : 10}
-          ,{"name" : "TypeofUnit4","startPos" : 1953,"length" : 2}
-          ,{"name" : "Quantity4","startPos" : 1955,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService4","startPos" : 1963,"length" : 10}
-          ,{"name" : "ServiceFromDate4","startPos" : 1973,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag4","startPos" : 1981,"length" : 1}
-          ,{"name" : "Lineitemnumber4","startPos" : 1982,"length" : 3}
-          ,{"name" : "VisitID4","startPos" : 1985,"length" : 3}
-          ,{"name" : "LinesinVisit4","startPos" : 1988,"length" : 3}
-          ,{"name" : "VisitDate4","startPos" : 1991,"length" : 8}
-          ,{"name" : "VisitProcessedFlag4","startPos" : 1999,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs4","startPos" : 2000,"length" : 10}
-          ,{"name" : "OverallVisitType4","startPos" : 2010,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis4","startPos" : 2012,"length" : 7}
-          ,{"name" : "FinalAPGAssignment4","startPos" : 2019,"length" : 5}
-          ,{"name" : "FinalAPGType4","startPos" : 2024,"length" : 2}
-          ,{"name" : "FinalAPGCategory4","startPos" : 2026,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag4","startPos" : 2028,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag4","startPos" : 2029,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag4","startPos" : 2030,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag4","startPos" : 2031,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag4","startPos" : 2032,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag4","startPos" : 2034,"length" : 1}
-          ,{"name" : "PackagingFlag4","startPos" : 2035,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag4","startPos" : 2036,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag4","startPos" : 2037,"length" : 1}
-          ,{"name" : "LineItemActionFlag4","startPos" : 2038,"length" : 2}
-          ,{"name" : "ItemIDnumber4","startPos" : 2040,"length" : 3}
-          ,{"name" : "LineItemAPGPayment4","startPos" : 2043,"length" : 8}
-          ,{"name" : "LineItemExistingPayment4","startPos" : 2051,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment4","startPos" : 2059,"length" : 8}
-          ,{"name" : "LineItemAddonPayment4","startPos" : 2067,"length" : 8}
-          ,{"name" : "LineItemTotalPayment4","startPos" : 2075,"length" : 8}
-          ,{"name" : "LineItemBlendPercent4","startPos" : 2083,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight4","startPos" : 2088,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight4","startPos" : 2097,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent4","startPos" : 2106,"length" : 6}
-          ,{"name" : "LineItemPaymentAction4","startPos" : 2112,"length" : 2}
-          ,{"name" : "LineItemPaidUnits4","startPos" : 2114,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag4","startPos" : 2121,"length" : 2}
-          ,{"name" : "VisitAPGPayment4","startPos" : 2123,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment4","startPos" : 2131,"length" : 8}
-          ,{"name" : "VisitExistingPayment4","startPos" : 2139,"length" : 8}
-          ,{"name" : "VisitBlendedPayment4","startPos" : 2147,"length" : 8}
-          ,{"name" : "VisitAddonPayment4","startPos" : 2155,"length" : 8}
-          ,{"name" : "VisitPayment4","startPos" : 2163,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment4","startPos" : 2171,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight4","startPos" : 2179,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight4","startPos" : 2188,"length" : 9}
-          ,{"name" : "RevenueCode5","startPos" : 2197,"length" : 4}
-          ,{"name" : "TypeofRevenueCode5","startPos" : 2201,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC5","startPos" : 2202,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier15","startPos" : 2207,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier25","startPos" : 2209,"length" : 2}
-          ,{"name" : "ChargeofService5","startPos" : 2211,"length" : 10}
-          ,{"name" : "TypeofUnit5","startPos" : 2221,"length" : 2}
-          ,{"name" : "Quantity5","startPos" : 2223,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService5","startPos" : 2231,"length" : 10}
-          ,{"name" : "ServiceFromDate5","startPos" : 2241,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag5","startPos" : 2249,"length" : 1}
-          ,{"name" : "Lineitemnumber5","startPos" : 2250,"length" : 3}
-          ,{"name" : "VisitID5","startPos" : 2253,"length" : 3}
-          ,{"name" : "LinesinVisit5","startPos" : 2256,"length" : 3}
-          ,{"name" : "VisitDate5","startPos" : 2259,"length" : 8}
-          ,{"name" : "VisitProcessedFlag5","startPos" : 2267,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs5","startPos" : 2268,"length" : 10}
-          ,{"name" : "OverallVisitType5","startPos" : 2278,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis5","startPos" : 2280,"length" : 7}
-          ,{"name" : "FinalAPGAssignment5","startPos" : 2287,"length" : 5}
-          ,{"name" : "FinalAPGType5","startPos" : 2292,"length" : 2}
-          ,{"name" : "FinalAPGCategory5","startPos" : 2294,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag5","startPos" : 2296,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag5","startPos" : 2297,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag5","startPos" : 2298,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag5","startPos" : 2299,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag5","startPos" : 2300,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag5","startPos" : 2302,"length" : 1}
-          ,{"name" : "PackagingFlag5","startPos" : 2303,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag5","startPos" : 2304,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag5","startPos" : 2305,"length" : 1}
-          ,{"name" : "LineItemActionFlag5","startPos" : 2306,"length" : 2}
-          ,{"name" : "ItemIDnumber5","startPos" : 2308,"length" : 3}
-          ,{"name" : "LineItemAPGPayment5","startPos" : 2311,"length" : 8}
-          ,{"name" : "LineItemExistingPayment5","startPos" : 2319,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment5","startPos" : 2327,"length" : 8}
-          ,{"name" : "LineItemAddonPayment5","startPos" : 2335,"length" : 8}
-          ,{"name" : "LineItemTotalPayment5","startPos" : 2343,"length" : 8}
-          ,{"name" : "LineItemBlendPercent5","startPos" : 2351,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight5","startPos" : 2356,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight5","startPos" : 2365,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent5","startPos" : 2374,"length" : 6}
-          ,{"name" : "LineItemPaymentAction5","startPos" : 2380,"length" : 2}
-          ,{"name" : "LineItemPaidUnits5","startPos" : 2382,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag5","startPos" : 2389,"length" : 2}
-          ,{"name" : "VisitAPGPayment5","startPos" : 2391,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment5","startPos" : 2399,"length" : 8}
-          ,{"name" : "VisitExistingPayment5","startPos" : 2407,"length" : 8}
-          ,{"name" : "VisitBlendedPayment5","startPos" : 2415,"length" : 8}
-          ,{"name" : "VisitAddonPayment5","startPos" : 2423,"length" : 8}
-          ,{"name" : "VisitPayment5","startPos" : 2431,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment5","startPos" : 2439,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight5","startPos" : 2447,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight5","startPos" : 2456,"length" : 9}
-          ,{"name" : "RevenueCode6","startPos" : 2465,"length" : 4}
-          ,{"name" : "TypeofRevenueCode6","startPos" : 2469,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC6","startPos" : 2470,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier16","startPos" : 2475,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier26","startPos" : 2477,"length" : 2}
-          ,{"name" : "ChargeofService6","startPos" : 2479,"length" : 10}
-          ,{"name" : "TypeofUnit6","startPos" : 2489,"length" : 2}
-          ,{"name" : "Quantity6","startPos" : 2491,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService6","startPos" : 2499,"length" : 10}
-          ,{"name" : "ServiceFromDate6","startPos" : 2509,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag6","startPos" : 2517,"length" : 1}
-          ,{"name" : "Lineitemnumber6","startPos" : 2518,"length" : 3}
-          ,{"name" : "VisitID6","startPos" : 2521,"length" : 3}
-          ,{"name" : "LinesinVisit6","startPos" : 2524,"length" : 3}
-          ,{"name" : "VisitDate6","startPos" : 2527,"length" : 8}
-          ,{"name" : "VisitProcessedFlag6","startPos" : 2535,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs6","startPos" : 2536,"length" : 10}
-          ,{"name" : "OverallVisitType6","startPos" : 2546,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis6","startPos" : 2548,"length" : 7}
-          ,{"name" : "FinalAPGAssignment6","startPos" : 2555,"length" : 5}
-          ,{"name" : "FinalAPGType6","startPos" : 2560,"length" : 2}
-          ,{"name" : "FinalAPGCategory6","startPos" : 2562,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag6","startPos" : 2564,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag6","startPos" : 2565,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag6","startPos" : 2566,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag6","startPos" : 2567,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag6","startPos" : 2568,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag6","startPos" : 2570,"length" : 1}
-          ,{"name" : "PackagingFlag6","startPos" : 2571,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag6","startPos" : 2572,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag6","startPos" : 2573,"length" : 1}
-          ,{"name" : "LineItemActionFlag6","startPos" : 2574,"length" : 2}
-          ,{"name" : "ItemIDnumber6","startPos" : 2576,"length" : 3}
-          ,{"name" : "LineItemAPGPayment6","startPos" : 2579,"length" : 8}
-          ,{"name" : "LineItemExistingPayment6","startPos" : 2587,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment6","startPos" : 2595,"length" : 8}
-          ,{"name" : "LineItemAddonPayment6","startPos" : 2603,"length" : 8}
-          ,{"name" : "LineItemTotalPayment6","startPos" : 2611,"length" : 8}
-          ,{"name" : "LineItemBlendPercent6","startPos" : 2619,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight6","startPos" : 2624,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight6","startPos" : 2633,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent6","startPos" : 2642,"length" : 6}
-          ,{"name" : "LineItemPaymentAction6","startPos" : 2648,"length" : 2}
-          ,{"name" : "LineItemPaidUnits6","startPos" : 2650,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag6","startPos" : 2657,"length" : 2}
-          ,{"name" : "VisitAPGPayment6","startPos" : 2659,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment6","startPos" : 2667,"length" : 8}
-          ,{"name" : "VisitExistingPayment6","startPos" : 2675,"length" : 8}
-          ,{"name" : "VisitBlendedPayment6","startPos" : 2683,"length" : 8}
-          ,{"name" : "VisitAddonPayment6","startPos" : 2691,"length" : 8}
-          ,{"name" : "VisitPayment6","startPos" : 2699,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment6","startPos" : 2707,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight6","startPos" : 2715,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight6","startPos" : 2724,"length" : 9}
-          ,{"name" : "RevenueCode7","startPos" : 2733,"length" : 4}
-          ,{"name" : "TypeofRevenueCode7","startPos" : 2737,"length" : 1}
-          ,{"name" : "ProcedureCodeCPT4HCPC7","startPos" : 2738,"length" : 5}
-          ,{"name" : "ProcedureCodeModifier17","startPos" : 2743,"length" : 2}
-          ,{"name" : "ProcedureCodeModifier27","startPos" : 2745,"length" : 2}
-          ,{"name" : "ChargeofService7","startPos" : 2747,"length" : 10}
-          ,{"name" : "TypeofUnit7","startPos" : 2757,"length" : 2}
-          ,{"name" : "Quantity7","startPos" : 2759,"length" : 8}
-          ,{"name" : "NonCoveredChargeofService7","startPos" : 2767,"length" : 10}
-          ,{"name" : "ServiceFromDate7","startPos" : 2777,"length" : 8}
-          ,{"name" : "PrevisitProcedureFlag7","startPos" : 2785,"length" : 1}
-          ,{"name" : "Lineitemnumber7","startPos" : 2786,"length" : 3}
-          ,{"name" : "VisitID7","startPos" : 2789,"length" : 3}
-          ,{"name" : "LinesinVisit7","startPos" : 2792,"length" : 3}
-          ,{"name" : "VisitDate7","startPos" : 2795,"length" : 8}
-          ,{"name" : "VisitProcessedFlag7","startPos" : 2803,"length" : 1}
-          ,{"name" : "VisitProcessedWarningsMsgs7","startPos" : 2804,"length" : 10}
-          ,{"name" : "OverallVisitType7","startPos" : 2814,"length" : 2}
-          ,{"name" : "MedicalVisitDiagnosis7","startPos" : 2816,"length" : 7}
-          ,{"name" : "FinalAPGAssignment7","startPos" : 2823,"length" : 5}
-          ,{"name" : "FinalAPGType7","startPos" : 2828,"length" : 2}
-          ,{"name" : "FinalAPGCategory7","startPos" : 2830,"length" : 2}
-          ,{"name" : "MultipleSPDiscountFlag7","startPos" : 2832,"length" : 1}
-          ,{"name" : "RepeatAncillaryDiscountFlag7","startPos" : 2833,"length" : 1}
-          ,{"name" : "BilateralDiscountFlag7","startPos" : 2834,"length" : 1}
-          ,{"name" : "TermProcedureDiscountFlag7","startPos" : 2835,"length" : 1}
-          ,{"name" : "LineItemUnassignedFlag7","startPos" : 2836,"length" : 2}
-          ,{"name" : "PackagedPerDiemFlag7","startPos" : 2838,"length" : 1}
-          ,{"name" : "PackagingFlag7","startPos" : 2839,"length" : 1}
-          ,{"name" : "SameSPConsolidationFlag7","startPos" : 2840,"length" : 1}
-          ,{"name" : "ClinicalSPConsolidationFlag7","startPos" : 2841,"length" : 1}
-          ,{"name" : "LineItemActionFlag7","startPos" : 2842,"length" : 2}
-          ,{"name" : "ItemIDnumber7","startPos" : 2844,"length" : 3}
-          ,{"name" : "LineItemAPGPayment7","startPos" : 2847,"length" : 8}
-          ,{"name" : "LineItemExistingPayment7","startPos" : 2855,"length" : 8}
-          ,{"name" : "LineItemBlendedPayment7","startPos" : 2863,"length" : 8}
-          ,{"name" : "LineItemAddonPayment7","startPos" : 2871,"length" : 8}
-          ,{"name" : "LineItemTotalPayment7","startPos" : 2879,"length" : 8}
-          ,{"name" : "LineItemBlendPercent7","startPos" : 2887,"length" : 5}
-          ,{"name" : "LineItemAdjustedAPGWeight7","startPos" : 2892,"length" : 9}
-          ,{"name" : "LineItemFullAPGWeight7","startPos" : 2901,"length" : 9}
-          ,{"name" : "LineItemPaymentPercent7","startPos" : 2910,"length" : 6}
-          ,{"name" : "LineItemPaymentAction7","startPos" : 2916,"length" : 2}
-          ,{"name" : "LineItemPaidUnits7","startPos" : 2918,"length" : 7}
-          ,{"name" : "LineItemPaymentAdjFlag7","startPos" : 2925,"length" : 2}
-          ,{"name" : "VisitAPGPayment7","startPos" : 2927,"length" : 8}
-          ,{"name" : "VisitTransitionAPGPayment7","startPos" : 2935,"length" : 8}
-          ,{"name" : "VisitExistingPayment7","startPos" : 2943,"length" : 8}
-          ,{"name" : "VisitBlendedPayment7","startPos" : 2951,"length" : 8}
-          ,{"name" : "VisitAddonPayment7","startPos" : 2959,"length" : 8}
-          ,{"name" : "VisitPayment7","startPos" : 2967,"length" : 8}
-          ,{"name" : "VisitNontransitionPayment7","startPos" : 2975,"length" : 8}
-          ,{"name" : "VisitAdjustedAPGWeight7","startPos" : 2983,"length" : 9}
-          ,{"name" : "VisitFullAPGWeight7","startPos" : 2992,"length" : 9}
+          {"name" : "DischargeNum", "startPos" : 1, "length" : 14}
+          ,{"name" : "ContinuationFlag", "startPos" : 15, "length" : 1}
+          ,{"name" : "RecordSequence", "startPos" : 16, "length" : 3}
+          ,{"name" : "RecordCount", "startPos" : 19, "length" : 3}
+          ,{"name" : "UPID", "startPos" : 61, "length" : 10}
+          ,{"name" : "PatientDOB", "startPos" : 90, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "Age", "startPos" : 98, "length" : 3}
+          ,{"name" : "Sex", "startPos" : 104, "length" : 1}
+          ,{"name" : "Race", "startPos" : 105, "length" : 2}
+          ,{"name" : "Ethnicity", "startPos" : 107, "length" : 1}
+          ,{"name" : "ZipCode", "startPos" : 161, "length" : 5}
+          ,{"name" : "County", "startPos" : 170, "length" : 2}
+          ,{"name" : "Region", "startPos" : 172, "length" : 2}
+          ,{"name" : "FacilityID", "startPos" : 175, "length" : 6}
+          ,{"name" : "FacilityName", "startPos" : 182, "length" : 70}
+          ,{"name" : "OperatingTime", "startPos" : 482, "length" : 3}
+          ,{"name" : "AdmissionDate", "startPos" : 504, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "DischargeDate", "startPos" : 517, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "SamedayDischargeFlag", "startPos" : 530, "length" : 1}
+          ,{"name" : "DischargeDisposition", "startPos" : 531, "length" : 2}
+          ,{"name" : "AdmissionDiagnosisCode", "startPos" : 537, "length" : 7}
+          ,{"name" : "DiagnosisCode1", "startPos" : 544, "length" : 7}
+          ,{"name" : "DiagnosisCode2", "startPos" : 551, "length" : 7}
+          ,{"name" : "DiagnosisCode3", "startPos" : 558, "length" : 7}
+          ,{"name" : "DiagnosisCode4", "startPos" : 565, "length" : 7}
+          ,{"name" : "DiagnosisCode5", "startPos" : 572, "length" : 7}
+          ,{"name" : "DiagnosisCode6", "startPos" : 579, "length" : 7}
+          ,{"name" : "DiagnosisCode7", "startPos" : 586, "length" : 7}
+          ,{"name" : "DiagnosisCode8", "startPos" : 593, "length" : 7}
+          ,{"name" : "DiagnosisCode9", "startPos" : 600, "length" : 7}
+          ,{"name" : "DiagnosisCode10", "startPos" : 607, "length" : 7}
+          ,{"name" : "DiagnosisCode11", "startPos" : 614, "length" : 7}
+          ,{"name" : "DiagnosisCode12", "startPos" : 621, "length" : 7}
+          ,{"name" : "DiagnosisCode13", "startPos" : 628, "length" : 7}
+          ,{"name" : "DiagnosisCode14", "startPos" : 635, "length" : 7}
+          ,{"name" : "DiagnosisCode15", "startPos" : 642, "length" : 7}
+          ,{"name" : "DiagnosisCode16", "startPos" : 649, "length" : 7}
+          ,{"name" : "DiagnosisCode17", "startPos" : 656, "length" : 7}
+          ,{"name" : "DiagnosisCode18", "startPos" : 663, "length" : 7}
+          ,{"name" : "DiagnosisCode19", "startPos" : 670, "length" : 7}
+          ,{"name" : "DiagnosisCode20", "startPos" : 677, "length" : 7}
+          ,{"name" : "DiagnosisCode21", "startPos" : 684, "length" : 7}
+          ,{"name" : "DiagnosisCode22", "startPos" : 691, "length" : 7}
+          ,{"name" : "DiagnosisCode23", "startPos" : 698, "length" : 7}
+          ,{"name" : "DiagnosisCode24", "startPos" : 705, "length" : 7}
+          ,{"name" : "DiagnosisCode25", "startPos" : 712, "length" : 7}
+          ,{"name" : "AccidentType", "startPos" : 722, "length" : 2}
+          ,{"name" : "DateofAccident", "startPos" : 724, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode1", "startPos" : 746, "length" : 4}
+          ,{"name" : "ProcedureDate1", "startPos" : 750, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode2", "startPos" : 759, "length" : 4}
+          ,{"name" : "ProcedureDate2", "startPos" : 763, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode3", "startPos" : 772, "length" : 4}
+          ,{"name" : "ProcedureDate3", "startPos" : 776, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode4", "startPos" : 785, "length" : 4}
+          ,{"name" : "ProcedureDate4", "startPos" : 789, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode5", "startPos" : 798, "length" : 4}
+          ,{"name" : "ProcedureDate5", "startPos" : 802, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode6", "startPos" : 811, "length" : 4}
+          ,{"name" : "ProcedureDate6", "startPos" : 815, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode7", "startPos" : 824, "length" : 4}
+          ,{"name" : "ProcedureDate7", "startPos" : 828, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode8", "startPos" : 837, "length" : 4}
+          ,{"name" : "ProcedureDate8", "startPos" : 841, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode9", "startPos" : 850, "length" : 4}
+          ,{"name" : "ProcedureDate9", "startPos" : 854, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode10", "startPos" : 863, "length" : 4}
+          ,{"name" : "ProcedureDate10", "startPos" : 867, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode11", "startPos" : 876, "length" : 4}
+          ,{"name" : "ProcedureDate11", "startPos" : 880, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode12", "startPos" : 889, "length" : 4}
+          ,{"name" : "ProcedureDate12", "startPos" : 893, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode13", "startPos" : 902, "length" : 4}
+          ,{"name" : "ProcedureDate13", "startPos" : 906, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode14", "startPos" : 915, "length" : 4}
+          ,{"name" : "ProcedureDate14", "startPos" : 919, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "ICDCode15", "startPos" : 928, "length" : 4}
+          ,{"name" : "ProcedureDate15", "startPos" : 932, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "TypeofAnesthesia", "startPos" : 944, "length" : 2}
+          ,{"name" : "ICDAgeWarning", "startPos" : 946, "length" : 1}
+          ,{"name" : "ProcedureDateWarning", "startPos" : 947, "length" : 1}
+          ,{"name" : "ProcedureCodingMethodUsed", "startPos" : 948, "length" : 1}
+          ,{"name" : "TotalCharges", "startPos" : 1081, "length" : 12}
         ]
 }
