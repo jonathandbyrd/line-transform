@@ -90,20 +90,19 @@ function processLine(line) {
         for(var x in dd.fields) {
                 var field = dd.fields[x];
                 //chop up the data line by field
-                data[x] = line.substr((field.startPos - 1), field.length).trim();
-                //var fieldValue = line.substr(field.startPos, field.length);
+                var fieldValue = line.substr((field.startPos - 1), field.length).trim();
 
-                // //check for type
-                // if (!("undefined" == field.type)) {
-                //         switch (field.type) {
-                //                 case "date":
-                //                         fieldValue = moment(fieldValue, field.format.input, true).format(field.format.output);
-                //                         break;
-                //                 default:
-                //
-                //         }
-                // }
-                //data[x] = fieldValue;
+                //check for type
+                if (fieldValue.length > 0 && !("undefined" == field.type)) {
+                        switch (field.type) {
+                                case "date":
+                                        fieldValue = moment(fieldValue, field.format.input, true).format(field.format.output);
+                                        break;
+                                default:
+                
+                        }
+                }
+                data[x] = fieldValue;
         }
         var finalLine = `"${data.join("\",\"")}"`;
         out.write(`${finalLine.replace(/""/, "")}${eol}`);

@@ -45,7 +45,7 @@ else {
 //load the data dictionary
 var dd = require(ddPath);
 
-fs.readdirSync(dataDirectory).forEach(function(file) {
+fs.readdirSync(dataDirectory).forEach(function(file) { 
 
   var fileTime = "file: " + file;
   console.time(fileTime);
