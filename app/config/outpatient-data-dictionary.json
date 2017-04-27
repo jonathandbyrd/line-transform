@@ -83,5 +83,6 @@
           ,{"name" : "ProcedureDateWarning", "startPos" : 947, "length" : 1}
           ,{"name" : "ProcedureCodingMethodUsed", "startPos" : 948, "length" : 1}
           ,{"name" : "TotalCharges", "startPos" : 1081, "length" : 12}
+          ,{"name" : "EUPID","startPos" : 3289,"length" : 22}
         ]
 }

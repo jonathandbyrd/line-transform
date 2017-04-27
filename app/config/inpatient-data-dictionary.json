@@ -147,5 +147,9 @@
           ,{"name" : "PreOpDays15", "startPos" : 1995, "length" : 4}
           ,{"name" : "PostOpDays15", "startPos" : 1999, "length" : 4}
           ,{"name" : "FederalDRG", "startPos" : 2020, "length" : 3}
-          ,{"name" : "TotalCharges", "startPos" : 2087, "length" : 12}        ]
+          ,{"name" : "TotalCharges", "startPos" : 2087, "length" : 12}
+          ,{"name" : "EUPID","startPos" : 2789,"length" : 22}
+          ,{"name" : "DeathDate","startPos" : 5077,"length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
+          ,{"name" : "CauseofDeath","startPos" : 5085,"length" : 4}
+        ]
 }
