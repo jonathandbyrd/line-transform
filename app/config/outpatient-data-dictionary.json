@@ -6,7 +6,7 @@
           ,{"name" : "RecordCount", "startPos" : 19, "length" : 3}
           ,{"name" : "UPID", "startPos" : 61, "length" : 10}
           ,{"name" : "PatientDOB", "startPos" : 90, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
-          ,{"name" : "Age", "startPos" : 98, "length" : 3}
+          ,{"name" : "Age", "startPos" : 98, "length" : 3, "type" : "integer"}
           ,{"name" : "Sex", "startPos" : 104, "length" : 1}
           ,{"name" : "Race", "startPos" : 105, "length" : 2}
           ,{"name" : "Ethnicity", "startPos" : 107, "length" : 1}
@@ -82,7 +82,7 @@
           ,{"name" : "ICDAgeWarning", "startPos" : 946, "length" : 1}
           ,{"name" : "ProcedureDateWarning", "startPos" : 947, "length" : 1}
           ,{"name" : "ProcedureCodingMethodUsed", "startPos" : 948, "length" : 1}
-          ,{"name" : "TotalCharges", "startPos" : 1081, "length" : 12}
+          ,{"name" : "TotalCharges", "startPos" : 1081, "length" : 12, "type" : "integer"}
           ,{"name" : "EUPID","startPos" : 3289,"length" : 22}
         ]
 }

@@ -6,7 +6,7 @@
           ,{"name" : "RecordCount", "startPos" : 19, "length" : 3}
           ,{"name" : "UPID", "startPos" : 65, "length" : 10}
           ,{"name" : "PatientDOB", "startPos" : 94, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
-          ,{"name" : "Age", "startPos" : 102, "length" : 3}
+          ,{"name" : "Age", "startPos" : 102, "length" : 3, "type" : "integer"}
           ,{"name" : "Sex", "startPos" : 108, "length" : 1}
           ,{"name" : "Race", "startPos" : 109, "length" : 2}
           ,{"name" : "Ethnicity", "startPos" : 111, "length" : 1}
@@ -18,7 +18,7 @@
           ,{"name" : "AdmissionDate", "startPos" : 786, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
           ,{"name" : "ScheduledAdmissionFlag", "startPos" : 799, "length" : 1}
           ,{"name" : "DischargeDate", "startPos" : 800, "length" : 8, "type" : "date", "format" : {"input" : "YYYYMMDD", "output" : "YYYY-MM-DD"}}
-          ,{"name" : "LengthofStay", "startPos" : 813, "length" : 4}
+          ,{"name" : "LengthofStay", "startPos" : 813, "length" : 4, "type" : "integer"}
           ,{"name" : "DischargeDisposition", "startPos" : 1387, "length" : 2}
           ,{"name" : "AdmissionDiagnosisCode", "startPos" : 1395, "length" : 7}
           ,{"name" : "DiagnosisCode1", "startPos" : 1402, "length" : 7}
@@ -147,7 +147,7 @@
           ,{"name" : "PreOpDays15", "startPos" : 1995, "length" : 4}
           ,{"name" : "PostOpDays15", "startPos" : 1999, "length" : 4}
           ,{"name" : "FederalDRG", "startPos" : 2020, "length" : 3}
-          ,{"name" : "TotalCharges", "startPos" : 2087, "length" : 12}
+          ,{"name" : "TotalCharges", "startPos" : 2087, "length" : 12, "type" : "integer"}
           ,{"name" : "EUPID","startPos" : 2789,"length" : 22}
           ,{"name" : "DeathDate","startPos" : 5077,"length" : 8, "type" : "date", "format" : {"input" : "MMDDYYYY", "output" : "YYYY-MM-DD"}}
           ,{"name" : "CauseofDeath","startPos" : 5085,"length" : 4}
