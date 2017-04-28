@@ -13,6 +13,8 @@ const inPatientDictionary = "inpatient-data-dictionary.json";
 const outPatientDictionary = "outpatient-data-dictionary.json";
 
 var ddPath = "";
+var keyMap = {};
+
 //get the record types; inpatient or outpatient
 var recordType = process.argv[2];
 if (recordType == undefined || recordType.length <= 0) {
@@ -31,10 +33,20 @@ if (recordType == undefined || recordType.length <= 0) {
       else {
         switch (recordType) {
           case "inpatient":
-          ddPath = "./config/inpatient-data-dictionary.json";
+            ddPath = "./config/inpatient-data-dictionary.json";
+            keyMap = {
+              eupidIndex : [2788,22] //{"EUPID","startPos" : 2789,"length" : 22}
+              ,admitDateIndex : [785,8] //{"AdmissionDate","startPos" : 786,"length" : 8}
+              ,facilityIDIndex : [199,6] //{"FacilityID","startPos" : 200,"length" : 6}
+            };
           break;
           case "outpatient":
-          ddPath = "./config/outpatient-data-dictionary.json";
+            ddPath = "./config/outpatient-data-dictionary.json";
+            keyMap = {
+              eupidIndex : [3288,22] //{"EUPID","startPos" : 3289,"length" : 22}
+              ,admitDateIndex : [503,8] //{"AdmissionDate","startPos" : 504,"length" : 8}
+              ,facilityIDIndex : [174,6] //{"FacilityID","startPos" : 175,"length" : 6}
+            };
           break;
         }
       }
@@ -95,8 +107,8 @@ if (recordType == undefined || recordType.length <= 0) {
       if (line.length <= 0) return;
 
       //determine if its a record we can exclude; no eupid
-      //{"EUPID","startPos" : 2789,"length" : 22}
-      if (line.substr(2788, 22).trim().length <= 0) return;
+      //{"EUPID"}
+      if (line.substr(keyMap.eupidIndex[0], keyMap.eupidIndex[1]).trim().length <= 0) return;
 
       goodrec++;
 
@@ -106,11 +118,9 @@ if (recordType == undefined || recordType.length <= 0) {
       var data = [];
 
       //generate our key
-      //{"FacilityID","startPos" : 200,"length" : 6}
-      //{"AdmissionDate","startPos" : 786,"length" : 8}
-      var rowKey = cleanLine.substr(2788, 22).trim() //eupid
-                 + cleanLine.substr(785, 8).trim() //AdmissionDate
-                 + cleanLine.substr(199, 6).trim(); //FacilityID
+      var rowKey = cleanLine.substr(keyMap.eupidIndex[0], keyMap.eupidIndex[1]).trim() //eupid
+                 + cleanLine.substr(keyMap.admitDateIndex[0], keyMap.admitDateIndex[1]).trim() //AdmissionDate
+                 + cleanLine.substr(keyMap.facilityIDIndex[0], keyMap.facilityIDIndex[1]).trim(); //FacilityID
 
       var hashedKey = getMD5Hash(rowKey);
 
@@ -126,14 +136,19 @@ if (recordType == undefined || recordType.length <= 0) {
           switch (field.type) {
             case "date":
               //have to fix bad dates
-              if (trimValue.length < 8) {
-                var fixedValue = fieldValue.replace(/  /g, "01");
-                console.log("date: " + fieldValue);
-                trimValue = fixedValue;
-              }
-              console.log("date: " + trimValue);
-              fieldValue = moment(trimValue, field.format.input, true).format(field.format.output);
+              //this replaces any missing two digits "  "
+              //with "01"
+              var fixedValue = fieldValue.replace(/  /g, "01");
+              trimValue = moment(fixedValue, field.format.input, true).format(field.format.output);
               break;
+            case "integer":
+              //converts data to integer
+              try {
+                trimValue = parseInt(fieldValue);
+              }
+              catch (e) {
+                trimValue = "";
+              }
             default:
 
           }
