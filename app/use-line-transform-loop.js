@@ -113,6 +113,8 @@ if (recordType == undefined || recordType.length <= 0) {
       goodrec++;
 
       //need to remove double quotes
+      //we'll replace with a space to preserve
+      //the nature of the fixed-width file
       var cleanLine = line.replace(/"/g, " ");
 
       var data = [];
@@ -124,37 +126,16 @@ if (recordType == undefined || recordType.length <= 0) {
 
       var hashedKey = getMD5Hash(rowKey);
 
+      //chop up the data line by field
       for(var x in dd.fields) {
         var field = dd.fields[x];
-        //chop up the data line by field
-
-        var fieldValue = cleanLine.substr((field.startPos - 1), field.length);
-        var trimValue = fieldValue.trim();
-
-        //check for type
-        if (trimValue.length > 0 && !("undefined" == field.type)) {
-          switch (field.type) {
-            case "date":
-              //have to fix bad dates
-              //this replaces any missing two digits "  "
-              //with "01"
-              var fixedValue = fieldValue.replace(/  /g, "01");
-              trimValue = moment(fixedValue, field.format.input, true).format(field.format.output);
-              break;
-            case "integer":
-              //converts data to integer
-              try {
-                trimValue = parseInt(fieldValue);
-              }
-              catch (e) {
-                trimValue = "";
-              }
-            default:
-
-          }
-        }
-        data[x] = trimValue;
+        data[x] = cleanLine.substr((field.startPos - 1), field.length).trim();
       }
+
+      //we'll append the hashed Key as the
+      //first column of data to the data row
       var finalLine = `"${hashedKey}","${data.join("\",\"")}"`;
+
+      //output each clean line of data
       out.write(`${finalLine.replace(/""/g, "")}${eol}`);
     }
